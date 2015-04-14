@@ -1,0 +1,26 @@
+#為普通四則運算式
+1+1 
+"Arr, matey!"
+6*7
+#為數學邏輯規則
+3<4
+2+2==5
+T==TRUE
+#定義x後所做的運算
+x<-42
+x/2
+x <- "Arr, matey!"
+x
+x <- TRUE
+#總和、重複、開根號
+sum(1,3,5)
+rep("Yo ho!",times=3)
+sqrt(16)
+#函式help=說明功能、函式example=舉例子
+help(sum)
+example(min)
+help(rep)
+#叫出現存檔案
+list.files()
+source("bottle1.R.txt")
+source("bottle2.R.txt")
