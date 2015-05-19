@@ -1,0 +1,57 @@
+---
+title: "chapter6"
+output: html_document
+---
+
+### Data Frames6-1
+要把每個類型標明清楚
+```{r Q1-1, echo=TRUE, results='asis'}
+chests <- c('gold', 'silver', 'gems', 'gold', 'gems')
+weights <- factor(chests)
+prices <- factor(chests)
+types <- factor(chests)
+treasure <- data.frame(weights, prices, types)
+```
+```{r Q1-2, echo=TRUE, results='asis'}
+print(treasure)
+```
+
+### Data Frame Access6-2
+```{r Q2-1, echo=TRUE, results='asis'}
+treasure[[2]]
+```
+```{r Q2-2, echo=TRUE, results='asis'}
+treasure[["weights"]]
+```
+```{r Q2-4, echo=TRUE, results='asis'}
+treasure$prices
+```
+```{r Q2-5, echo=TRUE, results='asis'}
+treasure[["types"]]
+```
+
+### Loading Data Frames6-3
+
+```{r Q3-1, echo=TRUE, results='markup'}
+list.files()
+```
+不用複製答案
+```{r Q3-3, echo=TRUE, results='markup'}
+read.csv("targets.csv")
+```
+```{r Q3-5, echo=TRUE, results='markup'}
+read.table("piracy.csv", sep="\t")
+  
+```
+```{r Q3-6, echo=TRUE, results='markup'}
+read.table("piracy.csv", sep="\t", header=TRUE)
+   
+```
+如要變整齊可把asis改成markup
+
+piracy和targets是下載的檔案名:)
+```{r Q4-1, echo=TRUE, results='markup'}
+targets <- read.csv("targets.csv")
+infantry <- read.table("piracy.csv", sep="\t", header=TRUE)
+merge(x = targets, y = infantry)  
+```
